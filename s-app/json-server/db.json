@@ -1,0 +1,38 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "1"
+    },
+    {
+      "id": 2,
+      "name": "20"
+    },
+    {
+      "id": 3,
+      "name": "3"
+    },
+    {
+      "id": 4,
+      "name": "4"
+    },
+    {
+      "id": 5,
+      "name": "5"
+    },
+    {
+      "id": 6,
+      "name": "6"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
