@@ -1,4 +1,22 @@
 {
+  "receive-payment":[
+    {
+      "id":1,
+      "Payment Date": "2017/4/24",
+      "Payment Amount": "20000"
+    },
+    {
+      "id":2,
+      "Payment Date": "2017/4/25",
+      "Payment Amount": "30000"
+    },
+    {
+      "id":3,
+      "Payment Date": "2017/4/26",
+      "Payment Amount": "40000"
+    }
+  ],
+  
   "classes": [
     {
       "id": 1,

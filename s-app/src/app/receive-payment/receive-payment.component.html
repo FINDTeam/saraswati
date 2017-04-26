@@ -1,3 +1,44 @@
-<p>
-  receive-payment works!
-</p>
+
+<button routerLink="/newPayment" class="btn btn-primary">Add New</button>
+<table class="table table-hover" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5" (mfSelectedEntities)="setSelectedEntities($event)">
+    <thead>
+        <tr>
+            <th style="width: 10%" >
+                #<mfRowSelectorHead></mfRowSelectorHead>
+            </th>
+            <th style="width: 10%">
+                <mfDefaultSorter by="id">Student Id</mfDefaultSorter>
+            </th>
+            <th style="width: 15%">
+                <mfDefaultSorter by="paymentDate">Payment Date</mfDefaultSorter>
+            </th>
+            <th style="width: 15%">
+                <mfDefaultSorter by="paymentAmount">Payment Amount</mfDefaultSorter>
+            </th>
+            <th style="width: 30%">
+                <mfDefaultSorter by="paymentAmount">Edit / Delete</mfDefaultSorter>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of mf.data; let ndx = index" style="text-align:left">
+            <td>
+                <mfRowSelector [entity]="item" [checkboxId]="ndx"></mfRowSelector>
+            </td>
+            <td >{{item.id}}</td>
+            <td>{{item.paymentDate}}</td>
+            <td>{{item.paymentAmount}}</td>
+            <td>
+                <button class="btn btn-primary" click="onEdit(item)">Edit</button>
+                <button class="btn btn-primary" (click)="onDelete(item)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+            </td>
+        </tr>
+    </tfoot>
+</table>
