@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { ClassComponent } from './class/class.component';
 
 import { DataTableModule } from "ng2-data-table";
+import { ReceivePaymentComponent } from './receive-payment/receive-payment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClassComponent
+    ClassComponent,
+    ReceivePaymentComponent
   ],
   imports: [
     BrowserModule,
