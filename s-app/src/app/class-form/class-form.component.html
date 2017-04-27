@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Class: {{ title }}</div>
+  <div class="panel-body">
+    <form class="form-horizontal" [formGroup]="form" (ngSubmit)="form.valid && onSave()">
+      <div class="form-group row" [ngClass]="{'has-danger':!form.controls['name'].valid && form.controls['name'].touched}">
+        <label class="col-md-2 form-control-label" for="name">Name</label>
+        <div class="col-md-10">
+          <input id="name" class="form-control" type="text" placeholder="Name" formControlName="name">
+          <span *ngIf="!form.controls['name'].valid && form.controls['name'].touched" class="help-block">Name is required</span>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
+        <button class="btn btn-default" type="button" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
