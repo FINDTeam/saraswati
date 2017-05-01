@@ -6,7 +6,7 @@ import { Klass } from "app/models/class";
 
 @Injectable()
 export class ClassService {
-  private url: string = 'http://localhost:3000/classes';
+  private url: string = 'http://localhost:5000/api/classes';
   constructor(private http: Http) { }
 
     getClasses(): Observable<Klass[]> {
